@@ -1,0 +1,9 @@
+FROM php:7.4-apache
+RUN a2enmod rewrite
+# WORKDIR /var/www/html
+# RUN apt-get update
+# RUN apt-get install -y --no-install-recommends nano
+# git zip
+# RUN cp /etc/apache/mods-available/rewrite.load /etc/apache/mods-enabled/rewrite.load
+RUN docker-php-ext-install mysqli pdo pdo_mysql
+# RUN chmod 777 file.name
